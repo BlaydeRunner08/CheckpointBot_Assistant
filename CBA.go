@@ -33,6 +33,11 @@ func sendKey(key byte) {
 	if key == 0x20 {
 		hidCode = 0x2c
 	}
+	
+	// slash
+	if key == 0xBF {
+		hidCode = 0x38 
+	}
 
 	// minus (used as a divider)
 	if key == 0x2d {
