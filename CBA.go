@@ -124,7 +124,7 @@ func main() {
 	http.Handle("/", fileServer)
 	http.HandleFunc("/send", sendHandler)
 
-	fmt.Printf("callouts server starting on port %d\n", port)
+	fmt.Printf("assistant server starting on port %d\n", port)
 
 	if err := http.ListenAndServe(fmt.Sprintf(":%d", port), nil); err != nil {
 		log.Fatal(err)
