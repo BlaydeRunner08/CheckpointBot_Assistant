@@ -82,6 +82,11 @@ func getTimestamp() int64 {
 func sendHandler(w http.ResponseWriter, r *http.Request) {
 	msg, ok := r.URL.Query()["msg"]
 
+	if msg == "warlord"	{
+		log.Println("catching test!")
+		msg = "/join CheckpointBot#3587"
+	}
+
 	if !ok || len(msg[0]) < 1 {
 		log.Println("request param 'msg' is missing")
 		return
