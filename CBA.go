@@ -39,6 +39,12 @@ func sendKey(key byte) {
 		hidCode = 0x38 
 	}
 
+	// hashtag
+	if key == 0x32 {
+		hidCode = 0x33
+		modifier = 0x20
+	}
+	
 	// minus (used as a divider)
 	if key == 0x2d {
 		hidCode = 0x2d
